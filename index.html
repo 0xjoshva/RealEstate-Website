@@ -159,71 +159,92 @@
         with the individual attention and service you deserve. We believe in a
         strict Code of Ethics.
       </p>
+
+   
     </section>
-    <section id="filter">
-      <form action="" id="search">
-        <label class="search-lbl" for="PropertyType"
-          >LOOKING FOR
-          <select
-          name="PropertyType"
-            class="form-select form-select-sm"
-            aria-label=".form-select-sm example"
-          >
-            <option value="" disabled selected hidden class="text-muted">
-              Property Type
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </label>
-                <label class="search-lbl" for="Cities"
-          >LOCATION
-          <select
-          name="Cities"
-            class="form-select form-select-sm"
-            aria-label=".form-select-sm example"
-          >
-            <option value="" selected hidden class="text-muted">
-              All Cities
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </label>
-                <label class="search-lbl" for="PropertySize"
-          >PROPERTY SIZE
-          <select
-          name="PropertySize"
-            class="form-select form-select-sm"
-            aria-label=".form-select-sm example"
-          >
-            <option value="" selected hidden class="text-muted">
-              Bedrooms
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </label>
-                <label class="search-lbl" for="Budget"
-          >YOUR BUDGET
-          <select
-          name="Budget"
-            class="form-select form-select-sm"
-            aria-label=".form-select-sm example"
-          >
-            <option value="" selected hidden class="text-muted">
-              Max. Price
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </label>
-        <button type="submit" id="search-btn">SEARCH</button>
-      </form>
+     <div id="search-form">  
+      <div class="radio-buttons-wrapper">
+        <div class="button">
+          <input type="radio" id="a25" name="check-substitution-2" checked />
+          <label class="btn btn-default" for="a25">All Status</label>
+        </div>
+        <div class="button">
+          <input type="radio" id="a50" name="check-substitution-2" />
+          <label class="btn btn-default" for="a50">For Rent</label>
+        </div>
+        <div class="button">
+          <input type="radio" id="a75" name="check-substitution-2" />
+          <label class="btn btn-default" for="a75">For Sale</label>
+        </div>
+
+      </div>
+      <div id="filter">
+        <form action="" id="search">
+          <label class="search-lbl" for="PropertyType"
+            >LOOKING FOR
+            <select
+              name="PropertyType"
+              class="form-select form-select-sm"
+              aria-label=".form-select-sm example"
+            >
+              <option value="" disabled selected hidden class="text-muted">
+                Property Type
+              </option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </label>
+          <label class="search-lbl" for="Cities"
+            >LOCATION
+            <select
+              name="Cities"
+              class="form-select form-select-sm"
+              aria-label=".form-select-sm example"
+            >
+              <option value="" selected hidden class="text-muted">
+                All Cities
+              </option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </label>
+          <label class="search-lbl" for="PropertySize"
+            >PROPERTY SIZE
+            <select
+              name="PropertySize"
+              class="form-select form-select-sm"
+              aria-label=".form-select-sm example"
+            >
+              <option value="" selected hidden class="text-muted">
+                Bedrooms
+              </option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </label>
+          <label class="search-lbl" for="Budget"
+            >YOUR BUDGET
+            <select
+              name="Budget"
+              class="form-select form-select-sm"
+              aria-label=".form-select-sm example"
+            >
+              <option value="" selected hidden class="text-muted">
+                Max. Price
+              </option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </label>
+          <button type="submit" id="search-btn">SEARCH</button>
+        </form>
+      </div>
+    </div>
+    <section id="listings">
     </section>
     <script src="script.js"></script>
     <script
