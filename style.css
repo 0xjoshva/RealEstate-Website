@@ -499,3 +499,114 @@ font-family: 'Roboto', sans-serif;
   width: 300px;
   padding-top: 1%;
 }
+
+.box {
+  height: 300px;
+  width: 400px;
+  background-color: red;
+  margin: 30px 0px 30px 30px;
+  border-radius: 4px 4px;
+}
+
+.box-container {
+  padding-top: 4%;
+}
+
+.box-1 {
+  background: rgb(65, 67, 69);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8242647400757178) 0%,
+      rgba(35, 37, 38, 0) 38%
+    ),
+    url(assets/black-1.jpg);
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+
+.box-2 {
+  background: rgb(65, 67, 69);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8242647400757178) 0%,
+      rgba(35, 37, 38, 0) 38%
+    ),
+    url(assets/black-2.jpg);
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+.box-3 {
+  background: rgb(65, 67, 69);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8242647400757178) 0%,
+      rgba(35, 37, 38, 0) 38%
+    ),
+    url(assets/black-3.jpg);
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+.box-4 {
+  background: rgb(65, 67, 69);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8242647400757178) 0%,
+      rgba(35, 37, 38, 0) 38%
+    ),
+    url(assets/black-4.jpg);
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+.box-5 {
+  background: rgb(65, 67, 69);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8242647400757178) 0%,
+      rgba(35, 37, 38, 0) 38%
+    ),
+    url(assets/black-5.jpg);
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+.box-6 {
+  background: rgb(65, 67, 69);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8242647400757178) 0%,
+      rgba(35, 37, 38, 0) 38%
+    ),
+    url(assets/black-6.jpg);
+  background-size: cover;
+  transition: all 1s ease-in-out;
+}
+
+.box-1:hover{
+  background-image: url(assets/black-1.jpg);
+  transition: all 1s ease-in;
+}
+
+.box-2:hover{
+  background-image: url(assets/black-2.jpg);
+  transition: all 1s ease-in;
+}
+
+.box-3:hover{
+  background-image: url(assets/black-3.jpg);
+  transition: all 1s ease-in;
+}
+.box-4:hover{
+  background-image: url(assets/black-4.jpg);
+  transition: all 1s ease-in;
+}
+.box-5:hover{
+  background-image: url(assets/black-5.jpg);
+  transition: all 1s ease-in;
+}
+.box-6:hover{
+  background-image: url(assets/black-6.jpg);
+  transition: all 1s ease-in;
+}
+
+.box:hover{
+  filter: brightness(120%);
+}
