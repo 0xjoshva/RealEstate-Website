@@ -588,28 +588,34 @@ a:active {
 .box-1:hover {
   background-image: url(assets/black-1.jpg);
   transition: 1s ease-in;
+  transform: translateY(-3px);
 }
 
 .box-2:hover {
   background-image: url(assets/black-2.jpg);
   transition: all 1s ease-in;
+  transform: translateY(-3px);
 }
 
 .box-3:hover {
   background-image: url(assets/black-3.jpg);
   transition: all 1s ease-in;
+  transform: translateY(-3px);
 }
 .box-4:hover {
   background-image: url(assets/black-4.jpg);
   transition: all 1s ease-in;
+    transform: translateY(-3px);
 }
 .box-5:hover {
   background-image: url(assets/black-5.jpg);
   transition: all 1s ease-in;
+    transform: translateY(-3px);
 }
 .box-6:hover {
   background-image: url(assets/black-6.jpg);
   transition: all 1s ease-in;
+    transform: translateY(-3px);
 }
 
 .box:hover {
