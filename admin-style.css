@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: Roboto;
+}
+ol,
+ul {
+  list-style: none !important;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  width: 100% !important;
+}
+
+section {
+  width: 100% !important;
+}
+body {
+  width: 100% !important;
+}
+/* 
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; 
+*/
+
+nav{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137)
+}
+
+#admin-tools{
+background: rgb(228, 228, 228);
+height: 100vh;
+width: 100%;
+}
+
+#profile-pic{
+    height: 25px;
+    width: 25px;
+    border-radius:50%;
+}
+
+#panel{
+    background-color: white;
+    width: 80%;
+    height: 100vh;
+    border-radius: 8px 8px;
+}
+
+.badge{
+width:30px !important;
+height: auto !important;
+font-size: 12px !important;
+}
+
+#pnl-sub{
+font-size: 15px !important;
+}
