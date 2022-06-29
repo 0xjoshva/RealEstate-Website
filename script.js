@@ -32,7 +32,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         bathrooms: 2,
         garages: 1,
         size: 1200,
-        price: 540000,
+        price: 54000,
         category: "STUDIO",
       },
       {
@@ -64,7 +64,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         bathrooms: 2,
         garages: 1,
         size: 2560,
-        price: 876000,
+        price: 8760,
         category: "STUDIO",
       },
       {
@@ -173,7 +173,7 @@ const boxContainer = document.getElementById("box-container");
      <div class="box">
         <figure>
         <img src="${property.imageURL}" alt="" class="house-image">
-         <figcaption>$<span>${property.price}</span></figcaption>
+         <figcaption>$<span>${property.price}</span>/mo</figcaption>
         </figure>
         <div id="text">
           <h3 class="pt-1" id="title">${property.title}</h3>
