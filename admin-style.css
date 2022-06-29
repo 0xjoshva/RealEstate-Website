@@ -190,16 +190,40 @@ font-family: 'Open Sans', sans-serif;
   font-size: 15px !important;
 }
 
-.add-input{
+.search-input{
   width: 200px;
   height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.162);
+  border-bottom-left-radius:5px ;
+  border-top-left-radius: 5px;
+}
+
+.btn-search{
+  width: fit-content;
+  height: 40px;
+  color: white !important;
+  background: #2e4de8 !important;
+  font-weight: bolder;
+  border-bottom-right-radius:5px ;
+  border-top-right-radius: 5px;
+  border: none;
+  padding: 0px 13px 0px 13px;
+}
+
+input[type="search"]::placeholder {
+  padding: 10px !important;
 }
 
 #btn-add{
-    width: 160px;
+    width: 120px;
   height: 40px;
   color: white;
   background: #1DB954;
+  text-align: center;
+  margin-left: 15px;
 }
 
 #live-link{

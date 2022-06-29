@@ -506,6 +506,8 @@ a:active {
   width: 400px;
   background: transparent;
   flex-basis: 33.333333%;
+   border-radius: 4px 4px;
+   transition:all 1s ease-in-out
 }
 
 #box-container {
@@ -521,6 +523,9 @@ a:active {
   filter: brightness(110%);
 
   /* transform: translateY(-3px); */
+}
+.box:hover{
+  transform: translateY(-5px);
 }
 
 figure {
