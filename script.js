@@ -1,5 +1,7 @@
 arrProperties = [
-  (house1 = {
+  {
+    imageURL:
+      "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-1.jpg?raw=true",
     title: "Light And Modern Apartment",
     address: "2436 SW 8th St, Cape Town, WC 33135, ZA",
 
@@ -11,8 +13,11 @@ arrProperties = [
     garages: 1,
     size: 1200,
     price: 4500,
-  }),
-  (house2 = {
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-2.jpg?raw=true",
     title: "Renovated Studio",
     address: "194 Mercer Street, 627 Broadway, Durban, KZN 10012, ZA",
 
@@ -23,9 +28,12 @@ arrProperties = [
     bathrooms: 2,
     garages: 1,
     size: 1200,
-    price: 540.0,
-  }),
-  (house3 = {
+    price: 540000,
+    propertytype: "STUDIO",
+  },
+  {
+    imageURL:
+      "https://raw.githubusercontent.com/0xjoshva/RealEstate-Website/main/assets/black-3.jpg",
     title: "New Apartment Nice View",
     address: "8100 S Ashland Ave, East London, EC 60620, ZA",
 
@@ -36,9 +44,12 @@ arrProperties = [
     bathrooms: 1,
     garages: 1,
     size: 1789,
-    price: 11.0,
-  }),
-  (house4 = {
+    price: 11000,
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-4.jpg?raw=true",
     title: "Design Apartment",
     address: "Quincy St, Johannesburg, GP 80899, ZA",
 
@@ -49,9 +60,12 @@ arrProperties = [
     bathrooms: 2,
     garages: 1,
     size: 2560,
-    price: 876.0,
-  }),
-  (house5 = {
+    price: 876000,
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-5.jpg?raw=true",
     title: "Comfortable Apartment",
     address: "Fulton St, Cape Town, WC 8921, ZA",
 
@@ -63,8 +77,11 @@ arrProperties = [
     garages: 1,
     size: 4300,
     price: 1600,
-  }),
-  (house6 = {
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-6.jpg?raw=true",
     title: "Complex Apartment",
     address: "2195 SW 8th St, Durban, KZN 33135, ZA",
 
@@ -76,8 +93,11 @@ arrProperties = [
     garages: 1,
     size: 3450,
     price: 5600,
-  }),
-  (house7 = {
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://adorable-home.com/wp-content/uploads/2016/06/Modern-dark-interiors-4.jpg",
     title: "Modern Loft Apartment",
     address: "2450 Long St, Cape Town, WC 33135, ZA",
 
@@ -89,8 +109,11 @@ arrProperties = [
     garages: 1,
     size: 1678,
     price: 3750,
-  }),
-  (house8 = {
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://images.squarespace-cdn.com/content/v1/5ce56c992a52ef0001811af5/1566291873080-MPSRINC8HXY00TRF23Q7/black+kitchen+design+-+contemprory+firplace+design",
     title: "Ample Apartment",
     address: "3617 Clarington Ave, Los Angeles, CA 90034, USA",
 
@@ -102,8 +125,11 @@ arrProperties = [
     garages: 1,
     size: 2300,
     price: 1900,
-  }),
-  (house9 = {
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:
+      "https://archello.s3.eu-central-1.amazonaws.com/images/2020/11/03/nid-interior-modern-interior-design-of-2-bedroom-apartment-apartments-archello.1604392458.3519.png",
     title: "Comfortable Apartment",
     address: "3617 Clarington Ave, Los Angeles, CA 90034, USA",
 
@@ -115,8 +141,10 @@ arrProperties = [
     garages: 1,
     size: 2300,
     price: 1900,
-  }),
-  (house10 = {
+    propertytype: "APARTMENT",
+  },
+  {
+    imageURL:"https://www.yankodesign.com/images/design_news/2020/06/all-black-interior-designs-that-will-inspire-you-to-adapt-this-modern-minimal-trend/05-Black-Interior-Design-Inspiration_Alpine-Cabin_yankodesign.jpg",
     title: "New Apartment",
     address: "3215 Overland Ave, Johannesburg, GP 9283, 90034 ",
 
@@ -128,15 +156,24 @@ arrProperties = [
     garages: 1,
     size: 2300,
     price: 2450,
-  }),
+    propertytype: "APARTMENT",
+  },
 ];
 
-//        <h3 class="pt-1" id = "title" > ${ title } </h3>
-//          <p class="lead text-muted" id="address"><i class="bi bi-geo"></i> ${address}</p>
-//           <div class="icons">
-//             <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${bedrooms}</span></div>
-//             <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${bathrooms}</span></div>
-//             <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${garages}</span></div>
-//             <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${size}</span><span> Sq Ft</span></div>
-//           </div>
-//          <p id="property-type">${propertytype}</p>
+const cardContainer = document.getElementById("#card")
+function showCard() {
+  cardContainer.innerHTML = ""
+  arrProperties.forEach((property) => {
+    cardContainer.innerHTML += ` <h3 class="pt-1" id = "title" > ${property.title} </h3>
+         <p class="lead text-muted" id="address"><i class="bi bi-geo"></i> ${property.address}</p>
+          <div class="icons">
+            <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
+            <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
+            <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> Sq Ft</span></div>
+          </div>
+         <p id="property-type">${property.propertytype}</p>
+    `;
+  })
+}
+      
