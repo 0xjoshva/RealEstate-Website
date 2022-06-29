@@ -130,3 +130,13 @@ arrProperties = [
     price: 2450,
   }),
 ];
+
+//        <h3 class="pt-1" id = "title" > ${ title } </h3>
+//          <p class="lead text-muted" id="address"><i class="bi bi-geo"></i> ${address}</p>
+//           <div class="icons">
+//             <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${bedrooms}</span></div>
+//             <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${bathrooms}</span></div>
+//             <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${garages}</span></div>
+//             <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${size}</span><span> Sq Ft</span></div>
+//           </div>
+//          <p id="property-type">${propertytype}</p>
