@@ -61,7 +61,7 @@ arrProperties = [
     garages: 1,
     size: 2560,
     price: 876000,
-    propertytype: "APARTMENT",
+    propertytype: "STUDIO",
   },
   {
     imageURL:
@@ -144,7 +144,8 @@ arrProperties = [
     propertytype: "APARTMENT",
   },
   {
-    imageURL:"https://www.yankodesign.com/images/design_news/2020/06/all-black-interior-designs-that-will-inspire-you-to-adapt-this-modern-minimal-trend/05-Black-Interior-Design-Inspiration_Alpine-Cabin_yankodesign.jpg",
+    imageURL:
+      "https://www.yankodesign.com/images/design_news/2020/06/all-black-interior-designs-that-will-inspire-you-to-adapt-this-modern-minimal-trend/05-Black-Interior-Design-Inspiration_Alpine-Cabin_yankodesign.jpg",
     title: "New Apartment",
     address: "3215 Overland Ave, Johannesburg, GP 9283, 90034 ",
 
@@ -160,20 +161,30 @@ arrProperties = [
   },
 ];
 
-const cardContainer = document.getElementById("#card")
-function showCard() {
-  cardContainer.innerHTML = ""
-  arrProperties.forEach((property) => {
-    cardContainer.innerHTML += ` <h3 class="pt-1" id = "title" > ${property.title} </h3>
-         <p class="lead text-muted" id="address"><i class="bi bi-geo"></i> ${property.address}</p>
+const boxContainer = document.getElementById("box-container");
+ function showBox() {
+   boxContainer.innerHTML = "";
+   arrProperties.forEach((property) => {
+     boxContainer.innerHTML += `
+     <div class="box">
+        <figure>
+        <img src="${property.imageURL}" alt="" class="house-image">
+         <figcaption>$<span>${property.price}</span></figcaption>
+        </figure>
+        <div id="text">
+          <h3 class="pt-1" id="title">${property.title}</h3>
+          <p class="lead text-muted" id="address"><i class="bi bi-geo"></i> ${property.address}</p>
           <div class="icons">
             <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
             <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
             <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
             <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> Sq Ft</span></div>
           </div>
-         <p id="property-type">${property.propertytype}</p>
-    `;
-  })
-}
-      
+          <p id="property-type">${property.propertytype}</p>
+        </div>
+      </div>`;
+   });
+ }
+ showBox();
+
+
