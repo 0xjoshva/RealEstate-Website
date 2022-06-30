@@ -502,13 +502,14 @@ a:active {
 }
 
 .box {
-  height: 450px;
-  width: 400px;
+  height: max-content;
+  width: max-content;
   background: transparent;
   flex-basis: 33.333333%;
    border-radius: 4px 4px;
-   transition:all 1s ease-in-out
+   transition:all 0.7s ease-in-out
 }
+
 
 #box-container {
   padding-left: 0;

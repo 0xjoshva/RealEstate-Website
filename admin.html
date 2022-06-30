@@ -87,14 +87,14 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                <form class="d-flex">
+                <form onsubmit="event.preventDefault();" class="d-flex">
                   <input
                     class="  search-input"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
                   />
-                  <button class="btn-search" type="button"><i class="bi bi-search"></i></button>
+                  <button onclick="event.preventDefault();addItem();" class="btn-search" type="button"><i class="bi bi-search"></i></button>
 
                 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-add">
@@ -111,26 +111,23 @@
       </div>
       <div class="modal-body">
         <form action="" id="modal-form">
-          <input type="text" id="title-form" placeholder="Title">
-          <input type="text" id="address-form" placeholder="Address">
-          <input type="url" placeholder="https://picsum.photos/300/400" id="imageURL-form">
-
-            
-          </select>
+          <input type="text" id="title-add" placeholder="Title">
+          <input type="text" id="address-add" placeholder="Address">
+          <input type="url" placeholder="https://picsum.photos/300/400" id="imageURL-add">
           <div>
-            <input type="number" id="size-form" placeholder="㎡" class="fw-bold">
-            <input type="number" id="price-form" placeholder="$">
+            <input type="number" id="size-add" placeholder="㎡" class="fw-bold">
+            <input type="number" id="price-add" placeholder="$">
           </div>
           <div class="bbg">
-            <input type="number" id="bed-f" placeholder="Bed">
-            <input type="number" id="bath-f" placeholder="Bath">
-            <input type="number" id="gar-f" placeholder="Park">
+            <input type="number" id="bed-add" placeholder="Bed">
+            <input type="number" id="bath-add" placeholder="Bath">
+            <input type="number" id="garage-add" placeholder="Cars">
           </div>
           <select
               name="PropertyType"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
-              id="category-select"
+              id="category-select-add"
             >
               <option value="" disabled selected hidden class="text-muted">
                 Property Type

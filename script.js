@@ -164,11 +164,24 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "APARTMENT",
       },
     ];
-
+function delProperty() {
+  if (id > -1) {
+    arrProperties.splice(id, 1);
+  }
+  localStorage.setItem(`property`, JSON.stringify(properties));
+  //
+  showProperties();
+}
+ //id of tasks
+  for (var i = 0; i < arrProperties.length; i++) {
+    console.log(i); }
+  //get index
+  let index = i;
+   
 const boxContainer = document.getElementById("box-container");
- function showBox() {
+function showBox() {
    boxContainer.innerHTML = "";
-   arrProperties.forEach((property) => {
+   arrProperties.forEach((property, index) => {
      boxContainer.innerHTML += `
      <div class="box">
         <figure>
