@@ -96,10 +96,73 @@
                   />
                   <button class="btn-search" type="button"><i class="bi bi-search"></i></button>
 
-                  <button class="btn" type="button" id="btn-add">
-                    <i class="bi bi-plus"></i> Add New
-                  </button>
-                  
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-add">
+  <i class="bi bi-plus"></i> Add New
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create A New Ad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" id="modal-form">
+          <input type="text" id="title-form" placeholder="Title">
+          <input type="text" id="address-form" placeholder="Address">
+          <input type="url" placeholder="https://picsum.photos/300/400" id="imageURL-form">
+
+            
+          </select>
+          <div>
+            <input type="number" id="size-form" placeholder="㎡" class="fw-bold">
+            <input type="number" id="price-form" placeholder="$">
+          </div>
+          <div class="bbg">
+            <input type="number" id="bed-f" placeholder="Bed">
+            <input type="number" id="bath-f" placeholder="Bath">
+            <input type="number" id="gar-f" placeholder="Park">
+          </div>
+          <select
+              name="PropertyType"
+              class="form-select form-select-sm"
+              aria-label=".form-select-sm example"
+              id="category-select"
+            >
+              <option value="" disabled selected hidden class="text-muted">
+                Property Type
+              </option>
+              <option value="1">Apartment</option>
+              <option value="2">Studio</option>
+              <option value="3">Office</option>
+            </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Create Listing</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </form>
               </div>
             </div>
@@ -116,6 +179,26 @@
             </div>
           </div>
           <ul class="container title-container">
+            <li class="items">
+              <div class="row item">
+                <span class="col-1">1</span>
+                <span class="col-1"><img src="assets/black-1.jpg" alt="" id="imageURL"></span>
+
+                <span class="col-6 title">Light And Modern Apartment 
+                  <div class="icons">
+            <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> 2</span></div>
+            <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> 3</span></div>
+            <div><i class="fa-solid fa-warehouse"></i><span id="garages"> 4</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> 1234</span><span> Sq Ft</span></div>
+          </div></span>
+               
+                <span class="col-1">Apartment</span>
+                <span class="col-1">4500</span>
+                 <span class="col-1"></span>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i class="bi bi-x-circle" id="delete"></i>
+              </div>
+            </li>
+
             <li class="items">
               <div class="row item">
                 <span class="col-1">1</span>

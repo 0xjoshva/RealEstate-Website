@@ -182,7 +182,7 @@ const boxContainer = document.getElementById("box-container");
             <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
             <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
             <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
-            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> Sq Ft</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> 	㎡</span></div>
           </div>
           <p id="property-type">${property.category}</p>
         </div>
