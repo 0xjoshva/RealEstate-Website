@@ -263,6 +263,7 @@ color: #a3aca8;
 .item{
   display: flex;
   justify-tracks: center;
+  font-family: 'Roboto', sans-serif; 
 }
 
 #edit{

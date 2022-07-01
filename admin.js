@@ -15,7 +15,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 1294,
         price: 4500,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -31,7 +31,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 1200,
         price: 54000,
-        category: "STUDIO",
+        category: "Studio",
       },
       {
         imageURL:
@@ -47,7 +47,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 1789,
         price: 11000,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -63,7 +63,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 2560,
         price: 8760,
-        category: "STUDIO",
+        category: "Studio",
       },
       {
         imageURL:
@@ -79,7 +79,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 4300,
         price: 1600,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -95,7 +95,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 3450,
         price: 5600,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -111,7 +111,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 1678,
         price: 3750,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -127,7 +127,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 2300,
         price: 1900,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -143,7 +143,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 860,
         price: 1900,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -159,7 +159,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         garages: 1,
         size: 1509,
         price: 2450,
-        category: "APARTMENT",
+        category: "Apartment",
       },
       {
         imageURL:
@@ -173,9 +173,9 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         bedrooms: 6,
         bathrooms: 3,
         garages: 3,
-        size: 1509,
+        size: 6700,
         price: 9950,
-        category: "OFFICE",
+        category: "Office",
       },
       {
         imageURL:
@@ -189,9 +189,9 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         bedrooms: 6,
         bathrooms: 4,
         garages: 3,
-        size: 1509,
+        size: 3459,
         price: 6995,
-        category: "OFFICE",
+        category: "Office",
       },
     ];
 
@@ -227,8 +227,9 @@ function addItem() {
 }
 
 //id of tasks
-  for (var i = 0; i < arrProperties.length; i++) {
-    console.log(i); }
+  for (var i = 0; i < arrProperties.indexOf; i++) {
+    console.log(i);
+  }
   //get index
   let id = i;
 
@@ -247,12 +248,11 @@ function showAllProperties() {
             <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
             <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
             <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
-            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> Sq Ft</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> ㎡</span></div>
           </div></span>
                
-                <span class="col-1">${property.category
-                }</span >
-                <span class="col-1">${property.price}</span>
+                <span class="col-1">${property.category}</span >
+                <span class="col-1">$ ${property.price}</span>
                  <span class="col-1"></span>
                 <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i class="bi bi-x-circle" id="delete"></i>
               </div>
@@ -261,3 +261,7 @@ function showAllProperties() {
   });
 }
 showAllProperties();
+
+
+let count = arrProperties.length;
+document.getElementById("badge-count").innerHTML = `${count}`;

@@ -163,7 +163,8 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         price: 2450,
         category: "APARTMENT",
       },
-      {
+      
+              {
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-12.jpg?raw=true",
         title: "Upscale Office",
@@ -175,7 +176,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         bedrooms: 6,
         bathrooms: 3,
         garages: 3,
-        size: 1509,
+        size: 6700,
         price: 9950,
         category: "OFFICE",
       },
@@ -191,7 +192,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         bedrooms: 6,
         bathrooms: 4,
         garages: 3,
-        size: 1509,
+        size: 3459,
         price: 6995,
         category: "OFFICE",
       },
