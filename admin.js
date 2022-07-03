@@ -207,7 +207,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
 
 //     property = property.splice(index, 1)
 
-// }
+// } 
 
 function addItem() {
   let property = {
