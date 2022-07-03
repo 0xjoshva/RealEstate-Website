@@ -617,3 +617,62 @@ input[type="email"]::placeholder {
 #text {
   margin-left: 1%;
 }
+/* responsiveness for iPhone 12 Pro and XR */
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+  #home {
+  background-size: cover;
+  height: 55vh;
+  width: 100% !important;
+}
+#info-item{
+  padding: none;
+  margin: none auto;
+}
+#discover-item{
+  display: none;
+}
+#newsletter-wrapper{
+  display: none;
+}
+.info {
+  height: 150px;}
+  .rights{
+    font-size: 10px;
+  }
+  #logo-footer{
+    width: 90px;
+    height: auto;
+  }
+  .socials-wrapper{
+font-size: 13px;
+  }
+  #contact-header{
+    font-size: 17px !important;
+  }
+  .contact-item{
+    font-size: 13px;
+  }
+  #subheading{
+    display: none;
+  }
+  #heading{
+    padding-top: 50%;
+  }
+  #btn-add{
+    display: none;
+  }
+  #logo{
+    height: auto;
+    width: 50px;
+  }
+  .box{
+    width: 100%;
+  }
+  .house-image{
+   width: 450px;
+   height: 300px;
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;
+  }
+}
