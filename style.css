@@ -270,6 +270,7 @@ nav {
   color: rgba(0, 0, 0, 0.363);
   font-weight: 600;
   font-family: "Roboto", sans-serif;
+  border: 0.5px solid rgb(207, 207, 207);
 }
 
 .search-lbl {
@@ -675,4 +676,17 @@ font-size: 13px;
    border-top-left-radius: 0px;
    border-top-right-radius: 0px;
   }
+  #search{
+width: 96%;
+padding: 20px 20px 20px 20px;
+}
+#search-form {
+  margin-top: -25%;}
+
+  #search-btn{
+  font-size: 13px;
+  padding: 5px 10px;
+  margin-top: 1.8%;
+  }
+
 }
