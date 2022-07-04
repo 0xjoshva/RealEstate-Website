@@ -686,7 +686,8 @@ padding: 20px 20px 20px 20px;
   #search-btn{
   font-size: 13px;
   padding: 5px 10px;
-  margin-top: 1.8%;
   }
-
+.search-lbl{
+  font-size: 8px;
+}
 }
