@@ -1,6 +1,6 @@
 # STERLING PROPERTY ADVISORS
 
-• project
+```• project
 - index
  + home
  + contact
@@ -14,4 +14,4 @@
 • live site: 
 https://sterling-real-estate.netlify.app/index.html
 
-*functionality does not work
+*functionality does not work```
