@@ -265,3 +265,6 @@ showAllProperties();
 
 let count = arrProperties.length;
 document.getElementById("badge-count").innerHTML = `${count}`;
+
+
+

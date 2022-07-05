@@ -73,13 +73,15 @@
               name="PropertyType"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              onchange=" "
+              id="type"
             >
-              <option value="" disabled selected hidden class="text-muted">
+              <option value="" disabled selected hidden class="text-muted" value="">
                 Property Type
               </option>
-              <option value="1">Apartment</option>
-              <option value="2">Studio</option>
-              <option value="3">Office</option>
+              <option value="APARTMENT">Apartment</option>
+              <option value="STUDIO">Studio</option>
+              <option value="OFFICE">Ofgitnfice</option>
             </select>
           </label>
           <label class="search-lbl" for="Cities"
@@ -88,6 +90,7 @@
               name="Cities"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              onchange="filter()"
             >
               <option value="" selected hidden class="text-muted">
                 All Cities
@@ -104,6 +107,7 @@
               name="PropertySize"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              onchange=" "
             >
               <option value="" selected hidden class="text-muted">
                 Bedrooms
@@ -122,20 +126,22 @@
               name="Budget"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              onchange="filterPrice()"
+              id="budgetfilter"
             >
               <option value="" selected hidden class="text-muted">
                 Max. Price
               </option>
               <option value="1">Any</option>
-              <option value="2">$1,000</option>
-              <option value="3">$3,000</option>
-              <option value="4">$5,000</option>
-              <option value="5">$10,000</option>
-              <option value="5">$20,000</option>
-              <option value="5">$60,000</option>
+              <option value="2">1000</option>
+              <option value="3">3000</option>
+              <option value="4">5000</option>
+              <option value="5">10000</option>
+              <option value="5">20000</option>
+              <option value="5">60000</option>
             </select>
           </label>
-          <button type="submit" id="search-btn">SEARCH</button>
+          <button type="submit" id="search-btn" onclick="display()">SEARCH</button>
         </form>
       </div>
     </div>
