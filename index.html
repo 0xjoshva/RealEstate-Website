@@ -81,7 +81,7 @@
               </option>
               <option value="APARTMENT">Apartment</option>
               <option value="STUDIO">Studio</option>
-              <option value="OFFICE">Ofgitnfice</option>
+              <option value="OFFICE">Office</option>
             </select>
           </label>
           <label class="search-lbl" for="Cities"
@@ -90,15 +90,16 @@
               name="Cities"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
-              onchange="filter()"
+              onchange="filterCity()"
+              id="citySelect"
             >
               <option value="" selected hidden class="text-muted">
                 All Cities
               </option>
-              <option value="1">Cape Town</option>
-              <option value="2">Johannesburg</option>
-              <option value="3">East London</option>
-              <option value="4">Durban</option>
+              <option value="Cape Town">Cape Town</option>
+              <option value="Johannesburg">Johannesburg</option>
+              <option value="East London">East London</option>
+              <option value="Durban">Durban</option>
             </select>
           </label>
           <label class="search-lbl" for="PropertySize"
@@ -107,7 +108,8 @@
               name="PropertySize"
               class="form-select form-select-sm"
               aria-label=".form-select-sm example"
-              onchange=" "
+              onchange="filterBedrooms()"
+              id="sizeSelect"
             >
               <option value="" selected hidden class="text-muted">
                 Bedrooms

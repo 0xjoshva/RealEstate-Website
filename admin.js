@@ -16,7 +16,8 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 1294,
         price: 4500,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "Cape Town",
       },
       {
         id: 2,
@@ -33,7 +34,8 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 1200,
         price: 54000,
-        category: "Studio",
+        category: "STUDIO",
+        city: "Durban",
       },
       {
         id: 3,
@@ -50,10 +52,11 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 1789,
         price: 11000,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "East London",
       },
       {
-        id:4,
+        id: 4,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-4.jpg?raw=true",
         title: "Design Apartment",
@@ -67,7 +70,8 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 2560,
         price: 8760,
-        category: "Studio",
+        category: "STUDIO",
+        city: "Johannesburg",
       },
       {
         id: 5,
@@ -84,7 +88,8 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 4300,
         price: 1600,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "Cape Town",
       },
       {
         id: 6,
@@ -101,10 +106,11 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 3450,
         price: 5600,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "Durban",
       },
       {
-        id:7,
+        id: 7,
         imageURL:
           "https://adorable-home.com/wp-content/uploads/2016/06/Modern-dark-interiors-4.jpg",
         title: "Modern Loft Apartment",
@@ -118,14 +124,15 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 1678,
         price: 3750,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "Cape Town",
       },
       {
-        id:8,
+        id: 8,
         imageURL:
           "https://images.squarespace-cdn.com/content/v1/5ce56c992a52ef0001811af5/1566291873080-MPSRINC8HXY00TRF23Q7/black+kitchen+design+-+contemprory+firplace+design",
         title: "Ample Apartment",
-        address: "3617 Clarington Ave, Los Angeles, CA 90034, USA",
+        address: "3617 Clarington Ave, Johannesburg, GP 90034, ZA",
 
         description:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.",
@@ -135,14 +142,15 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 2300,
         price: 1900,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "Johannesburg",
       },
       {
         id: 9,
         imageURL:
           "https://archello.s3.eu-central-1.amazonaws.com/images/2020/11/03/nid-interior-modern-interior-design-of-2-bedroom-apartment-apartments-archello.1604392458.3519.png",
         title: "Comfortable Apartment",
-        address: "3617 Clarington Ave, Los Angeles, CA 90034, USA",
+        address: "2321 Clarington Ave, Johannesburg, GP 90034, ZA",
 
         description:
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.",
@@ -152,7 +160,7 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 860,
         price: 1900,
-        category: "Apartment",
+        city: "Johannesburg",
       },
       {
         id: 10,
@@ -169,8 +177,10 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 1509,
         price: 2450,
-        category: "Apartment",
+        category: "APARTMENT",
+        city: "Johannesburg",
       },
+
       {
         id: 11,
         imageURL:
@@ -186,7 +196,8 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 3,
         size: 6700,
         price: 9950,
-        category: "Office",
+        category: "OFFICE",
+        city: "Cape Town",
       },
       {
         id: 12,
@@ -203,10 +214,12 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 3,
         size: 3459,
         price: 6995,
-        category: "Office",
+        category: "OFFICE",
+        city: "Cape Town",
       },
-  ];
-    localStorage.setItem("properties", JSON.stringify(properties));
+    ];
+
+localStorage.setItem("properties", JSON.stringify(properties));
 
 //show properties
 const propertyContainer = document.getElementById("property-container");
@@ -235,7 +248,6 @@ function showAllProperties() {
             </li>
      `;
   });
-  
 }
 showAllProperties();
 
@@ -258,17 +270,15 @@ function addProperty() {
   showAllProperties();
 }
 
-
-
 //count for badge
 let count = properties.length;
 document.getElementById("badge-count").innerHTML = `${count}`;
 
 // delete function
 function deleteProperty(id) {
-    if(id > -1) {
-        properties.splice(id, 1);
-    }
-   localStorage.setItem("properties", JSON.stringify(properties));
-    showAllProperties();
+  if (id > -1) {
+    properties.splice(id, 1);
+  }
+  localStorage.setItem("properties", JSON.stringify(properties));
+  showAllProperties();
 }
