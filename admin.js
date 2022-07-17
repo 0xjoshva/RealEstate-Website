@@ -244,7 +244,7 @@ function showAllProperties() {
                 <span class="col-1">${property.category}</span >
                 <span class="col-1">$ ${property.price}</span>
                  <span class="col-1"></span>
-                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="delProperty()" class="bi bi-x-circle" id="delete"></i>
               </div>
             </li>
      `;
@@ -277,7 +277,7 @@ let count = properties.length;
 document.getElementById("badge-count").innerHTML = `${count}`;
 
 // delete function
-function deleteProperty(id) {
+function delProperty() {
   if (id > -1) {
     properties.splice(id, 1);
   }
@@ -310,7 +310,7 @@ function showPropertiesDescending() {
                 <span class="col-1">${property.category}</span >
                 <span class="col-1">$ ${property.price}</span>
                  <span class="col-1"></span>
-                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="delProperty()" class="bi bi-x-circle" id="delete"></i>
               </div>
             </li>
      `;
@@ -341,7 +341,7 @@ function sortPriceDescending() {
                 <span class="col-1">${property.category}</span >
                 <span class="col-1">$ ${property.price}</span>
                  <span class="col-1"></span>
-                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="delProperty()" class="bi bi-x-circle" id="delete"></i>
               </div>
             </li>
      `;
@@ -371,9 +371,18 @@ function sortTitleAlphabetically() {
                 <span class="col-1">${property.category}</span >
                 <span class="col-1">$ ${property.price}</span>
                  <span class="col-1"></span>
-                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="delProperty()" class="bi bi-x-circle" id="delete"></i>
               </div>
             </li>
      `;
     });
+}
+
+//delete array item
+function delProperty() {
+  properties = properties.filter((property) => {
+    return property.id !== id; 
+  });
+  localStorage.setItem("properties", JSON.stringify(properties));
+  showAllProperties();
 }
