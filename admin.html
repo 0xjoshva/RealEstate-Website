@@ -138,6 +138,21 @@
               <option value="Studio">Studio</option>
               <option value="Office">Office</option>
             </select>
+            <select
+              onchange="getSelectValue();"
+              name="PropertyCity"
+              class="form-select form-select-sm"
+              aria-label=".form-select-sm example"
+              id="city-select-add"
+            >
+              <option value="" disabled selected hidden class="text-muted">
+                City
+              </option>
+              <option value="Cape Town">Cape Town</option>
+              <option value="Johannesburg">Johannesburg</option>
+              <option value="East London">East London</option>
+              <option value="Durban">Durban</option>
+            </select>
         </form>
       </div>
       <div class="modal-footer">
@@ -155,11 +170,11 @@
 
           <div class="container py-2" id="title-container">
             <div class="row ">
-              <div class="col-1 title-item">ID <i class="fa-solid fa-arrows-up-down"></i></div>
+              <div class="col-1 title-item" id="IDsort" onclick="showPropertiesDescending()">ID <i class="fa-solid fa-arrows-up-down"></i></div>
               <span class="col-1 title-item">PREVIEW</span>
-              <div class="col-6 title-item">TITLE <i class="fa-solid fa-arrow-down-a-z"></i></div>
+              <div class="col-6 title-item" onclick="sortTitleAlphabetically()">TITLE <i class="fa-solid fa-arrow-down-a-z"></i></div>
               <div class="col-1 title-item">CATEGORY</div>
-              <div class="col-1 title-item">PRICE <i class="bi bi-arrow-down-up"></i></div>
+              <div class="col-1 title-item" onclick="sortPriceDescending()">PRICE <i class="bi bi-arrow-down-up"></i></div>
               <div class="col-2 title-item"></div>
             </div>
           </div>

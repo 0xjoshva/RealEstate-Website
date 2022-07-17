@@ -160,6 +160,7 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         garages: 1,
         size: 860,
         price: 1900,
+        category: "APARTMENT",
         city: "Johannesburg",
       },
       {
@@ -263,6 +264,7 @@ function addProperty() {
     size: document.querySelector("#size-add").value,
     price: document.querySelector("#price-add").value,
     category: document.querySelector("#category-select-add").value,
+    city: document.querySelector("#city-select-add").value,
   });
   // Save to local storage
   localStorage.setItem("properties", JSON.stringify(properties));
@@ -281,4 +283,97 @@ function deleteProperty(id) {
   }
   localStorage.setItem("properties", JSON.stringify(properties));
   showAllProperties();
+}
+
+
+
+//sort ID descending or highest ID to lowest ID
+function showPropertiesDescending() {
+  propertyContainer.innerHTML = "";
+  properties
+    .sort((a, b) => b.id - a.id)
+    .forEach((property) => {
+      propertyContainer.innerHTML += `
+<li class="items">
+              <div class="row item">
+                <span class="col-1">${property.id}</span >
+                <span class="col-1"><img src="${property.imageURL}" alt="" id="imageURL"></span>
+
+                <span class="col-6 title">${property.title} 
+                  <div class="icons">
+            <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
+            <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
+            <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> ㎡</span></div>
+          </div></span>
+               
+                <span class="col-1">${property.category}</span >
+                <span class="col-1">$ ${property.price}</span>
+                 <span class="col-1"></span>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+              </div>
+            </li>
+     `;
+    });
+  
+}
+
+//sort price from highest to lowest
+function sortPriceDescending() {
+  propertyContainer.innerHTML = "";
+  properties
+    .sort((a, b) => b.price - a.price)
+    .forEach((property) => {
+      propertyContainer.innerHTML += `
+<li class="items">
+              <div class="row item">
+                <span class="col-1">${property.id}</span >
+                <span class="col-1"><img src="${property.imageURL}" alt="" id="imageURL"></span>
+
+                <span class="col-6 title">${property.title} 
+                  <div class="icons">
+            <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
+            <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
+            <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> ㎡</span></div>
+          </div></span>
+               
+                <span class="col-1">${property.category}</span >
+                <span class="col-1">$ ${property.price}</span>
+                 <span class="col-1"></span>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+              </div>
+            </li>
+     `;
+    });
+}
+
+//sort from A to Z
+function sortTitleAlphabetically() {
+  propertyContainer.innerHTML = "";
+  properties
+    .sort((a, b) => a.title.localeCompare(b.title))
+    .forEach((property) => {
+      propertyContainer.innerHTML += `
+<li class="items">
+              <div class="row item">
+                <span class="col-1">${property.id}</span >
+                <span class="col-1"><img src="${property.imageURL}" alt="" id="imageURL"></span>
+
+                <span class="col-6 title">${property.title} 
+                  <div class="icons">
+            <div><i class="fa-solid fa-bed"></i><span id="bedrooms"> ${property.bedrooms}</span></div>
+            <div><i class="fa-solid fa-shower"></i><span id="bathrooms"> ${property.bathrooms}</span></div>
+            <div><i class="fa-solid fa-warehouse"></i><span id="garages"> ${property.garages}</span></div>
+            <div><i class="fa-solid fa-ruler-combined"></i><span id="size"> ${property.size}</span><span> ㎡</span></div>
+          </div></span>
+               
+                <span class="col-1">${property.category}</span >
+                <span class="col-1">$ ${property.price}</span>
+                 <span class="col-1"></span>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
+              </div>
+            </li>
+     `;
+    });
 }
