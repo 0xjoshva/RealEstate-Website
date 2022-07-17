@@ -1,7 +1,8 @@
-let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
-  ? JSON.parse(localStorage.getItem("arrProperties"))
+let properties = JSON.parse(localStorage.getItem("properties"))
+  ? JSON.parse(localStorage.getItem("properties"))
   : [
       {
+        id: 1,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-1.jpg?raw=true",
         title: "Light And Modern Apartment",
@@ -18,6 +19,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id: 2,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-2.jpg?raw=true",
         title: "Renovated Studio",
@@ -34,6 +36,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Studio",
       },
       {
+        id: 3,
         imageURL:
           "https://raw.githubusercontent.com/0xjoshva/RealEstate-Website/main/assets/black-3.jpg",
         title: "New Apartment Nice View",
@@ -50,6 +53,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id:4,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-4.jpg?raw=true",
         title: "Design Apartment",
@@ -66,6 +70,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Studio",
       },
       {
+        id: 5,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-5.jpg?raw=true",
         title: "Comfortable Apartment",
@@ -82,6 +87,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id: 6,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-6.jpg?raw=true",
         title: "Complex Apartment",
@@ -98,6 +104,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id:7,
         imageURL:
           "https://adorable-home.com/wp-content/uploads/2016/06/Modern-dark-interiors-4.jpg",
         title: "Modern Loft Apartment",
@@ -114,6 +121,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id:8,
         imageURL:
           "https://images.squarespace-cdn.com/content/v1/5ce56c992a52ef0001811af5/1566291873080-MPSRINC8HXY00TRF23Q7/black+kitchen+design+-+contemprory+firplace+design",
         title: "Ample Apartment",
@@ -130,6 +138,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id: 9,
         imageURL:
           "https://archello.s3.eu-central-1.amazonaws.com/images/2020/11/03/nid-interior-modern-interior-design-of-2-bedroom-apartment-apartments-archello.1604392458.3519.png",
         title: "Comfortable Apartment",
@@ -146,6 +155,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id: 10,
         imageURL:
           "https://www.yankodesign.com/images/design_news/2020/06/all-black-interior-designs-that-will-inspire-you-to-adapt-this-modern-minimal-trend/05-Black-Interior-Design-Inspiration_Alpine-Cabin_yankodesign.jpg",
         title: "New Apartment",
@@ -162,6 +172,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Apartment",
       },
       {
+        id: 11,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-12.jpg?raw=true",
         title: "Upscale Office",
@@ -178,6 +189,7 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         category: "Office",
       },
       {
+        id: 12,
         imageURL:
           "https://github.com/0xjoshva/RealEstate-Website/blob/main/assets/black-11.jpg?raw=true",
         title: "Breathtaking Modern Office",
@@ -193,54 +205,18 @@ let arrProperties = JSON.parse(localStorage.getItem("arrProperties"))
         price: 6995,
         category: "Office",
       },
-    ];
+  ];
+    localStorage.setItem("properties", JSON.stringify(properties));
 
-//change badge number when items added or removed
-
-
-
-// //delete function
-// function delProperty(id) {
-//     property = property.filter(property => {
-//         property.id === id;
-//     })
-
-//     property = property.splice(index, 1)
-
-// } 
-
-function addItem() {
-  let property = {
-    imageURL: document.querySelector("#imageURL-add").value,
-    title: document.querySelector("#title-add").value,
-    address: document.querySelector("#address-add").value,
-    bedrooms: document.querySelector("#bed-add").value,
-    bathrooms: document.querySelector("#bath-add").value,
-    garages: document.querySelector("#garage-add").value,
-    size: document.querySelector("#size-add").value,
-    price: document.querySelector("#price-add").value,
-    category: document.querySelector("#category-select-add").value,
-  };
-  arrProperties.push(property);
-  showBox(arrProperties);
-  console.log(arrProperties);
-}
-
-//id of tasks
-  for (var i = 0; i < arrProperties.indexOf; i++) {
-    console.log(i);
-  }
-  //get index
-  let id = i;
-
+//show properties
 const propertyContainer = document.getElementById("property-container");
 function showAllProperties() {
   propertyContainer.innerHTML = "";
-  arrProperties.forEach((property) => {
+  properties.forEach((property) => {
     propertyContainer.innerHTML += `
 <li class="items">
               <div class="row item">
-                <span class="col-1">${id}</span>
+                <span class="col-1">${property.id}</span >
                 <span class="col-1"><img src="${property.imageURL}" alt="" id="imageURL"></span>
 
                 <span class="col-6 title">${property.title} 
@@ -254,17 +230,45 @@ function showAllProperties() {
                 <span class="col-1">${property.category}</span >
                 <span class="col-1">$ ${property.price}</span>
                  <span class="col-1"></span>
-                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i class="bi bi-x-circle" id="delete"></i>
+                <span class="col-1" id="CRUD-icons"><i class="bi bi-pencil-square" id="edit"></i><i onclick="deleteProperty()" class="bi bi-x-circle" id="delete"></i>
               </div>
             </li>
      `;
   });
+  
 }
 showAllProperties();
 
+function addProperty() {
+  properties.push({
+    id: properties.length + 1,
+    imageURL: document.querySelector("#imageURL-add").value,
+    title: document.querySelector("#title-add").value,
+    address: document.querySelector("#address-add").value,
+    bedrooms: document.querySelector("#bed-add").value,
+    bathrooms: document.querySelector("#bath-add").value,
+    garages: document.querySelector("#garage-add").value,
+    size: document.querySelector("#size-add").value,
+    price: document.querySelector("#price-add").value,
+    category: document.querySelector("#category-select-add").value,
+  });
+  // Save to local storage
+  localStorage.setItem("properties", JSON.stringify(properties));
+  //
+  showAllProperties();
+}
 
-let count = arrProperties.length;
+
+
+//count for badge
+let count = properties.length;
 document.getElementById("badge-count").innerHTML = `${count}`;
 
-
-
+// delete function
+function deleteProperty(id) {
+    if(id > -1) {
+        properties.splice(id, 1);
+    }
+   localStorage.setItem("properties", JSON.stringify(properties));
+    showAllProperties();
+}
